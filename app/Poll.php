@@ -7,6 +7,7 @@ namespace App;
 use App\Support\HasUuid;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 final class Poll extends Model
 {
@@ -33,5 +34,15 @@ final class Poll extends Model
     public function creator(): BelongsTo
     {
         return $this->belongsTo(User::class, 'created_by');
+    }
+
+    public function movies(): BelongsToMany
+    {
+        return $this->belongsToMany(Movie::class)
+            ->using(MoviesPolls::class)
+            ->withPivot([
+                'submitted_by',
+                'voting_eligible',
+            ]);
     }
 }
