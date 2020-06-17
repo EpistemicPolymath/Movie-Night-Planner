@@ -24,7 +24,8 @@ final class Poll extends Model
     protected $fillable = [
         'uuid',
         'created_by',
-        'event_title',
+        'title',
+        'description',
         'submissions_close_at',
         'voting_closes_at',
     ];

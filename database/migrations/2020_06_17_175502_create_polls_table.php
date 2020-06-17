@@ -16,7 +16,8 @@ class CreatePollsTable extends Migration
         Schema::create('polls', function (Blueprint $table) {
             $table->uuid('uuid')->primary();
             $table->unsignedBigInteger('created_by');
-            $table->string('event_title');
+            $table->string('title');
+            $table->text('description')->nullable();
 
             $table->timestamp('submissions_close_at');
             $table->timestamp('voting_closes_at');
