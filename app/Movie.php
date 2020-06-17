@@ -19,7 +19,7 @@ final class Movie extends Model
         'image_url',
         'runtime',
         'plot',
-        'generas',
+        'genres',
         'rating',
         'keywords',
     ];

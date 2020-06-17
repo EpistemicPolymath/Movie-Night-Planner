@@ -21,7 +21,7 @@ class CreateMoviesTable extends Migration
             $table->text('image_url');
             $table->string('runtime');
             $table->text('plot');
-            $table->json('generas');
+            $table->json('genres');
             $table->string('rating');
             $table->json('keywords');
 
