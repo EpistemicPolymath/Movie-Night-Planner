@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    <my-button></my-button>
                 </div>
             </div>
         </div>

@@ -17,8 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/contact', 'contact');
+Route::view('/about', 'about');
+Route::view('/test', 'my_test_view');
+
+// Tells the route to go to the user's controller and run the list function
+Route::get('/users', 'UsersController@list');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::view('/test', 'my_test_view');
+
 
