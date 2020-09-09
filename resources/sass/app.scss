@@ -6,3 +6,42 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// composer install
+// npm install
+
+// npm run dev
+// rebuilds everything fromscratch, handy for some debugging
+
+// npm run watch 
+// only rebuilds what was changed
+
+#app {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.template {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    font-family: 'Noto Sans JP', sans-serif;;
+    background-color: $off-white;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+header {
+    // display: flex;
+    // flex-flow: row wrap;
+    // justify-content: center;
+    // align-items: center;
+    span {
+        padding: 25px;
+    }
+}
