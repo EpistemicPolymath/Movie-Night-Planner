@@ -21,9 +21,3 @@
         }
     }
 </script>
-
-<style>
-#whatever {
-
-}
-</style>
